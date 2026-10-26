@@ -5,7 +5,7 @@ Static personal site. Everything inside `public/` is the site; nothing else is u
 ## Deployment
 
 Pushing to `main` runs `.github/workflows/deploy.yml`, which uploads `public/` to the
-cPanel hosting (Namecheap, server `business23.web-hosting.com`) over FTPS using
+cPanel hosting (Namecheap, FTP host `ftp.fahadalmansour.space`) over FTPS using
 [SamKirkland/FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) v4.4.0.
 It can also be run manually from the Actions tab (workflow_dispatch).
 
@@ -19,8 +19,8 @@ No credential is stored in this repository.
 
 | Secret | Value |
 | --- | --- |
-| `FTP_HOST` | `business23.web-hosting.com` (or the FTP host shown in cPanel → FTP Accounts → Configure FTP Client) |
-| `FTP_USERNAME` | The cPanel username, or a dedicated FTP account created in cPanel → FTP Accounts |
+| `FTP_HOST` | `ftp.fahadalmansour.space` (from cPanel → FTP Accounts → Configure FTP Client; explicit FTPS on port 21) |
+| `FTP_USERNAME` | `fsalmansour` (the cPanel account), or a dedicated FTP account created in cPanel → FTP Accounts |
 | `FTP_PASSWORD` | That account's password |
 | `FTP_SERVER_DIR` | Target directory on the server, with a trailing slash. For the main domain this is usually `public_html/`. If you create a dedicated FTP account whose home is already `public_html`, use `./` |
 
