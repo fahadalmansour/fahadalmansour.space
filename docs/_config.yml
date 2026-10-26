@@ -1,0 +1,13 @@
+title: Fahad Almansour
+description: HR in Riyadh. Notes on people operations, systems, and tooling.
+lang: ar
+baseurl: "/fahadalmansour.space"
+url: "https://fahadalmansour.github.io"
+theme: minima
+author: Fahad Almansour
+show_excerpts: true
+header_pages:
+  - about.md
+minima:
+  social_links:
+    github: fahadalmansour

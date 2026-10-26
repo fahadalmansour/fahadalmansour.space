@@ -32,3 +32,18 @@ Recommendation: create a dedicated FTP account in cPanel whose directory is rest
 The first deploy uploads everything in `public/`. Check the run log in the Actions tab; a
 connection or authentication error points to `FTP_HOST`, `FTP_USERNAME` or `FTP_PASSWORD`,
 while files landing in the wrong folder points to `FTP_SERVER_DIR`.
+
+## GitHub Pages (Jekyll)
+
+The `docs/` folder is a Jekyll site published by GitHub Pages at
+https://fahadalmansour.github.io/fahadalmansour.space/ using the built-in `minima` theme.
+No workflow is needed: enable it once in **Settings → Pages → Build and deployment →
+Source: Deploy from a branch → Branch: `main`, Folder: `/docs`**.
+
+Local preview (requires Ruby and Bundler):
+
+```
+cd docs && bundle install && bundle exec jekyll serve
+```
+
+`public/` (cPanel deploy) and `docs/` (GitHub Pages) are independent for now.
